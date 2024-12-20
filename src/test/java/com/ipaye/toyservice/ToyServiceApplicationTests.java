@@ -34,5 +34,30 @@ class ToyServiceApplicationTests {
         assertEquals("Toy is playing", result);
     }
 
+    @Test
+    void TestToysIsSwitchedOn(){
+
+        // tell mock what to do
+        when(batteryRepository.switchedOn()).thenReturn(true);
+
+        // call method
+        String result = toyService.switchedOn();
+
+        // check the result
+        assertEquals("Toy is switched on", result);
+    }
+
+    @Test
+    void TestToysIfFaulty(){
+
+        // tell mock what to do
+        when(batteryRepository.faulty()).thenReturn(true);
+
+        // call method
+        String result = toyService.faulty();
+
+        // check the result
+        assertEquals("Toy is faulty", result);
+    }
 
 }

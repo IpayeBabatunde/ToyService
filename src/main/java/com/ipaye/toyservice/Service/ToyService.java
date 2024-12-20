@@ -15,9 +15,25 @@ public class ToyService {
     
     public String play(){
         if(batteryRepository.hasPower()){
-            return "Toy is working";
+            return "Toy is playing";
         }
         else
             return "No Power";
+    }
+
+    public String switchedOn(){
+        if (batteryRepository.switchedOn()){
+            return "Toy is switched on";
+        }
+        else
+            return "Toy is switched off";
+    }
+
+    public String faulty(){
+        if(batteryRepository.faulty()){
+            return "Toy is faulty";
+        }
+        else
+            return "Toy is working fine";
     }
 }

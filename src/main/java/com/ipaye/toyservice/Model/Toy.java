@@ -1,7 +1,6 @@
 package com.ipaye.toyservice.Model;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 import java.util.List;
 

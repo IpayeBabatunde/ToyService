@@ -15,7 +15,7 @@ public class Battery {
     private String type;
 
     @Column(nullable=false)
-    private int capacity;
+    private int power;
 
     public Long getId() {
         return id;
@@ -33,11 +33,11 @@ public class Battery {
         this.type=type;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public int getPower() {
+        return power;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity=capacity;
+    public void setPower(int power) {
+        this.power=power;
     }
 }
