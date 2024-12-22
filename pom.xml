@@ -9,17 +9,26 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ipaye</groupId>
-    <artifactId>ToyService</artifactId>
+    <artifactId>toyService</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ToyService</name>
-    <description>ToyService</description>
-    <url/>
+    <description>A brief description of the ToyService project</description>
+    <url>https://github.com/IpayeBabatunde/ToyService</url>
     <licenses>
-        <license/>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
     </licenses>
     <developers>
-        <developer/>
+        <developer>
+            <id>IpayeBabatunde</id>
+            <name>Ipaye Babatunde</name>
+            <email>fineboyhakim@gmail.com</email>
+        </developer>
     </developers>
+
     <scm>
         <connection/>
         <developerConnection/>
@@ -30,6 +39,8 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -81,6 +92,8 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version> <!-- Replace with the latest version -->
         </dependency>
+
+
     </dependencies>
 
     <build>
@@ -91,5 +104,16 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/IpayeBabatunde/ToyService</url>
+        </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/IpayeBabatunde/ToyService</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

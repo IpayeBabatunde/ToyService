@@ -3,17 +3,15 @@ package com.ipaye.toyservice;
 import com.ipaye.toyservice.Repository.BatteryRepository;
 import com.ipaye.toyservice.Service.ToyService;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
-class ToyServiceApplicationTests {
+class ToyServiceTests {
 
     @Mock
     private BatteryRepository batteryRepository;
@@ -59,5 +57,20 @@ class ToyServiceApplicationTests {
         // check the result
         assertEquals("Toy is faulty", result);
     }
+
+    @Test
+    void TestToyNeedsRepair(){
+
+        // tell mock what to do
+        when(batteryRepository.needRepair()).thenReturn(true);
+
+        // call method
+        String result = toyService.needRepair();
+
+        // check the result
+        assertEquals("Toy needs repair", result);
+    }
+
+
 
 }

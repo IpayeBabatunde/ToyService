@@ -36,4 +36,13 @@ public class ToyService {
         else
             return "Toy is working fine";
     }
+
+    public String needRepair(){
+        if(batteryRepository.needRepair()){
+
+            return "Toy needs repair";
+        }
+        else
+            return "Toy is ok";
+    }
 }

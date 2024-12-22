@@ -19,4 +19,7 @@ public interface BatteryRepository extends JpaRepository<Battery, Long> {
 
     @Query("SELECT CASE WHEN COUNT(b) > 0 THEN true ELSE false END FROM Battery b WHERE b.power > 0")
     boolean faulty();
+
+    @Query("SELECT CASE WHEN COUNT(b) > 0 THEN true ELSE false END FROM Battery b WHERE b.power > 0")
+    boolean needRepair();
 }
